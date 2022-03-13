@@ -1,3 +1,7 @@
+body {
+  background: #6ebbb1;
+}
+
 .container {
   display: -ms-grid;
   display: grid;
@@ -48,17 +52,117 @@
 
 .container .players .Player1 {
   padding-left: 10%;
-  background: red;
+  background: #11e2ae;
 }
 
 .container .players .Player2 {
   padding-right: 10%;
-  background: red;
+  background: #11e2ae;
 }
 
 .container .TicTak {
   -ms-grid-column: 2;
   -ms-grid-column-span: 3;
   grid-column: 2/5;
+  grid-row: 4/-1;
+  display: -ms-grid;
+  display: grid;
+  background-color: #0ebb73;
+  text-align: center;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  justify-items: stretch;
+  grid-gap: 2%;
+}
+
+.container .TicTak #id1 {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  border: 2px solid salmon;
+}
+
+.container .TicTak #id2 {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  border: 2px solid salmon;
+}
+
+.container .TicTak #id3 {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3/4;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  border: 2px solid salmon;
+}
+
+.container .TicTak #id4 {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  border: 2px solid salmon;
+}
+
+.container .TicTak #id5 {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  border: 2px solid salmon;
+}
+
+.container .TicTak #id6 {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3/4;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  border: 2px solid salmon;
+}
+
+.container .TicTak #id7 {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+  border: 2px solid salmon;
+}
+
+.container .TicTak #id8 {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+  border: 2px solid salmon;
+}
+
+.container .TicTak #id9 {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3/4;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+  border: 2px solid salmon;
 }
 /*# sourceMappingURL=style.css.map */

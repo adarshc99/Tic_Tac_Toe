@@ -1,3 +1,8 @@
+body
+{
+    background: rgb(110, 187, 177);
+}
+
 .container
 {
     display: grid;
@@ -28,20 +33,86 @@
         {
           
             padding-left: 10%;
-            background: red;
+            background: rgb(17, 226, 174);
            
         }
         .Player2
         {
             padding-right: 10%;
-            background: red;
+            background: rgb(17, 226, 174);
 
         }
-       
-    
     }
     .TicTak
     {
         grid-column: 2/5;
+        grid-row: 4/-1;
+        display: grid;
+        // align-self: center;
+        // justify-content: center;
+        // justify-items: center;
+        // align-items: center;
+        background-color: rgb(14, 187, 115);
+        text-align: center;
+        align-items: stretch;
+        justify-items: stretch;
+        grid-gap: 2%;
+       #id1
+       {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        border: 2px solid salmon;
+       }
+       #id2
+       {
+        grid-column: 2/3;
+        grid-row: 1/2;
+        border: 2px solid salmon;
+       }
+      
+       #id3
+       {
+        grid-column: 3/4;
+        grid-row: 1/2;
+        border: 2px solid salmon;
+           
+       }
+       #id4
+       {
+        grid-column: 1/2;
+        grid-row: 2/3;
+        border: 2px solid salmon;
+       }
+       #id5
+       {
+        grid-column: 2/3;
+        grid-row: 2/3;
+        border: 2px solid salmon;
+       }
+       #id6
+       {
+        grid-column: 3/4;
+        grid-row: 2/3;
+        border: 2px solid salmon;
+           
+       } 
+       #id7
+       {
+        grid-column:1/2;
+        grid-row:3/4 ;
+        border: 2px solid salmon;
+       }
+       #id8
+       {
+        grid-column: 2/3;
+        grid-row: 3/4;
+        border: 2px solid salmon;
+       } 
+       #id9
+       {
+        grid-column: 3/4;
+        grid-row: 3/4;
+        border: 2px solid salmon;
+       }
     }
 }
