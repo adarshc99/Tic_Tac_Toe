@@ -2,7 +2,14 @@ var Player_start = "1";
 var Player_value = {"1":"X","2":"O"};
 function New_game()
 {
-    Tic_Array = [];
+    for(let i=1;i<=Tic_Array.length;i++)
+    {
+        document.getElementById(`id${i}`).innerText = "";
+    }
+    Tic_Array = Array_Inslize(9);
+    Player_start = "1";
+    $(".Player1").css("background","red");
+    $(".Player2").css({"background":"rgb(17, 226, 174)","border":"none"});
 }
 function Array_Inslize(get_size) // to inslize array with all values as undefined
 {
@@ -27,86 +34,86 @@ function Can_write(get_id)
 function Check_winner()
 {
     
-    if((Tic_Array[0]!=null && Tic_Array[1]!=null && Tic_Array[2]!=null) && (Tic_Array[0] == Tic_Array[1]==Tic_Array[2]))
-    {
-        console.log("hello");
-        return true;
-    }
-    if(Tic_Array[3]!=null && Tic_Array[4]!=null && Tic_Array[5]!=null && (Tic_Array[3] == Tic_Array[4]==Tic_Array[5]))
+    if((Tic_Array[0]!=null && Tic_Array[1]!=null && Tic_Array[2]!=null) && (Tic_Array[0] == Tic_Array[1] && Tic_Array[1]==Tic_Array[2]))
     {
         return true;
     }
-    if(Tic_Array[6]!=null && Tic_Array[7]!=null && Tic_Array[8]!=null && (Tic_Array[6] == Tic_Array[7]==Tic_Array[8]))
+    if(Tic_Array[3]!=null && Tic_Array[4]!=null && Tic_Array[5]!=null && (Tic_Array[3] == Tic_Array[4] && Tic_Array[4]==Tic_Array[5]))
     {
         return true;
     }
-    if(Tic_Array[0]!=null && Tic_Array[3]!=null && Tic_Array[6]!=null && (Tic_Array[0] == Tic_Array[3]==Tic_Array[6]))
+    if(Tic_Array[6]!=null && Tic_Array[7]!=null && Tic_Array[8]!=null && (Tic_Array[6] == Tic_Array[7] && Tic_Array[7]==Tic_Array[8]))
     {
         return true;
     }
-    if(Tic_Array[1]!=null && Tic_Array[4]!=null && Tic_Array[7]!=null && (Tic_Array[1] == Tic_Array[4]==Tic_Array[7]))
+    if(Tic_Array[0]!=null && Tic_Array[3]!=null && Tic_Array[6]!=null && (Tic_Array[0] == Tic_Array[3] && Tic_Array[3]==Tic_Array[6]))
     {
         return true;
     }
-    if(Tic_Array[2]!=null && Tic_Array[5]!=null && Tic_Array[8]!=null && (Tic_Array[2] == Tic_Array[5]==Tic_Array[8]))
+    if(Tic_Array[1]!=null && Tic_Array[4]!=null && Tic_Array[7]!=null && (Tic_Array[1] == Tic_Array[4] && Tic_Array[4]==Tic_Array[7]))
     {
         return true;
     }
-    if(Tic_Array[0]!=null && Tic_Array[4]!=null && Tic_Array[8]!=null && (Tic_Array[0] == Tic_Array[4]==Tic_Array[8]))
+    if(Tic_Array[2]!=null && Tic_Array[5]!=null && Tic_Array[8]!=null && (Tic_Array[2] == Tic_Array[5] && Tic_Array[5]==Tic_Array[8]))
     {
         return true;
     }
-    if(Tic_Array[6]!=null && Tic_Array[4]!=null && Tic_Array[2]!=null && (Tic_Array[6] == Tic_Array[4]==Tic_Array[2]))
+    if(Tic_Array[0]!=null && Tic_Array[4]!=null && Tic_Array[8]!=null && (Tic_Array[0] == Tic_Array[4] && Tic_Array[4]==Tic_Array[8]))
+    {
+        return true;
+    }
+    if(Tic_Array[6]!=null && Tic_Array[4]!=null && Tic_Array[2]!=null && (Tic_Array[6] == Tic_Array[4] && Tic_Array[4]==Tic_Array[2]))
     {
         return true;
     }
     return false;
 }
 var Tic_Array = Array_Inslize(9);  // array to store all values
-console.table(Tic_Array);
 function Player_CLick(get_id)
 {
     if(Tic_Array[Number(get_id[2])-1] != "X" && Tic_Array[Number(get_id[2])-1] != "O")
-   {
-    if(Player_start == "1")
-        {
-            Tic_Array[Number(get_id[2])-1] = document.getElementById(get_id).innerText = Player_value[Player_start];
-            console.log(Tic_Array[Number(get_id[2])-1]);
-            // if(Check_winner())
-            // {
-            //     console.log("1");
-
-            // }
-            // else{
-            //     console.log("no here");
-            // }
-            console.log(Check_winner());
-            // console.table(Tic_Array);
-            $(".Player1").css("background","rgb(17, 226, 174)");
-            $(".Player2").css({"background":"red","border":"2px solid brown"});
-            Player_start = "2";
-        }
-        else
-        {
-            Tic_Array[Number(get_id[2])-1] = document.getElementById(get_id).innerText = Player_value[Player_start];
-            console.log(Tic_Array[Number(get_id[2])-1]);
-            if(Check_winner())
+    {
+        if(Player_start == "1")
             {
-                console.log("2");
+                document.getElementById(get_id).textContent = Player_value[Player_start];
+                Tic_Array[Number(get_id[2])-1] = Player_value[Player_start];
+                if(Check_winner() == true)
+                {
+                alert("Player 1 has won the Game");
+                New_game();
+                
+                }
+                else
+                {
+                    $(".Player1").css("background","rgb(17, 226, 174)");
+                    $(".Player2").css({"background":"red","border":"2px solid brown"});
+                    Player_start = "2";
+                }
+            
+            }
+            else
+            {
+                document.getElementById(get_id).textContent = Player_value[Player_start];
+                Tic_Array[Number(get_id[2])-1] = Player_value[Player_start];
+                if(Check_winner() == true)
+                {
+                    alert("Player 2 has won the Game");
+                    New_game();
+                
+                }
+                else
+                {
 
+                    $(".Player1").css({"background":"red","border":"2px solid brown"});
+                    $(".Player2").css("background","rgb(17, 226, 174)");
+                    Player_start = "1";
+                }
+            
             }
-            else{
-                console.log("no i am here");
-            }
-            // console.table(Tic_Array);
-            $(".Player1").css({"background":"red","border":"2px solid brown"});
-            $(".Player2").css("background","rgb(17, 226, 174)");
-            Player_start = "1";
         }
-    }
     else
     {
-        console.log("no");
+        alert("Value Already Available");
     } 
 }
 

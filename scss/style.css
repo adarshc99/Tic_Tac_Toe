@@ -27,6 +27,10 @@ body {
   border: 2px solid black;
 }
 
+.container .new_game:hover {
+  cursor: pointer;
+}
+
 .container .players {
   -ms-grid-row: 2;
   -ms-grid-row-span: 2;
@@ -77,82 +81,50 @@ body {
 }
 
 .container .TicTak #id1 {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-column: 1/2;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
-  grid-row: 1/2;
+  grid-column: 0.5;
+  grid-row: 0.5;
   border: 2px solid salmon;
 }
 
 .container .TicTak #id2 {
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 1;
-  grid-column: 2/3;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
-  grid-row: 1/2;
+  grid-column: 0.66667;
+  grid-row: 0.5;
   border: 2px solid salmon;
 }
 
 .container .TicTak #id3 {
-  -ms-grid-column: 3;
-  -ms-grid-column-span: 1;
-  grid-column: 3/4;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
-  grid-row: 1/2;
+  grid-column: 0.75;
+  grid-row: 0.5;
   border: 2px solid salmon;
 }
 
 .container .TicTak #id4 {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-column: 1/2;
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 1;
-  grid-row: 2/3;
+  grid-column: 0.5;
+  grid-row: 0.66667;
   border: 2px solid salmon;
 }
 
 .container .TicTak #id5 {
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 1;
-  grid-column: 2/3;
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 1;
-  grid-row: 2/3;
+  grid-column: 0.66667;
+  grid-row: 0.66667;
   border: 2px solid salmon;
 }
 
 .container .TicTak #id6 {
-  -ms-grid-column: 3;
-  -ms-grid-column-span: 1;
-  grid-column: 3/4;
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 1;
-  grid-row: 2/3;
+  grid-column: 0.75;
+  grid-row: 0.66667;
   border: 2px solid salmon;
 }
 
 .container .TicTak #id7 {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-column: 1/2;
-  -ms-grid-row: 3;
-  -ms-grid-row-span: 1;
-  grid-row: 3/4;
+  grid-column: 0.5;
+  grid-row: 0.75;
   border: 2px solid salmon;
 }
 
 .container .TicTak #id8 {
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 1;
-  grid-column: 2/3;
-  -ms-grid-row: 3;
-  -ms-grid-row-span: 1;
-  grid-row: 3/4;
+  grid-column: 0.66667;
+  grid-row: 0.75;
   border: 2px solid salmon;
 }
 
@@ -164,5 +136,10 @@ body {
   -ms-grid-row-span: 1;
   grid-row: 3/4;
   border: 2px solid salmon;
+}
+
+.container #Display_Winner {
+  height: inherit;
+  border: 10px solid black;
 }
 /*# sourceMappingURL=style.css.map */

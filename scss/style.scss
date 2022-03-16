@@ -1,8 +1,17 @@
+@mixin Style_Mixin($grid-column,$grid-row,$selector,$tag) 
+{
+    #{$selector}#{$tag}
+    {
+        grid-column: $grid-column;
+        grid-row: $grid-row;
+        border: 2px solid salmon;
+    }
+   
+}
 body
 {
     background: rgb(110, 187, 177);
 }
-
 .container
 {
     display: grid;
@@ -17,6 +26,10 @@ body
         background: rgb(18, 195, 207);
         border: 2px solid black;
     }
+    .new_game:hover
+    {
+        cursor:pointer;
+    }
     .players
     {
         grid-row: 2/4;
@@ -24,11 +37,8 @@ body
         display: flex;    
         flex-direction: row;
         justify-content: space-between;
-        // align-self: center;
         align-items: stretch;
         vertical-align:middle;
-    //    justify-content: center;
-        // background: red;
         .Player1
         {
           
@@ -48,72 +58,30 @@ body
         grid-column: 2/5;
         grid-row: 4/-1;
         display: grid;
-        // align-self: center;
-        // justify-content: center;
-        // justify-items: center;
-        // align-items: center;
         background-color: rgb(14, 187, 115);
         text-align: center;
         align-items: stretch;
         justify-items: stretch;
         grid-gap: 2%;
-       #id1
-       {
-        grid-column: 1/2;
-        grid-row: 1/2;
-        border: 2px solid salmon;
-        
-       }
-       #id2
-       {
-        grid-column: 2/3;
-        grid-row: 1/2;
-        border: 2px solid salmon;
-       }
-      
-       #id3
-       {
-        grid-column: 3/4;
-        grid-row: 1/2;
-        border: 2px solid salmon;
-           
-       }
-       #id4
-       {
-        grid-column: 1/2;
-        grid-row: 2/3;
-        border: 2px solid salmon;
-       }
-       #id5
-       {
-        grid-column: 2/3;
-        grid-row: 2/3;
-        border: 2px solid salmon;
-       }
-       #id6
-       {
-        grid-column: 3/4;
-        grid-row: 2/3;
-        border: 2px solid salmon;
-           
-       } 
-       #id7
-       {
-        grid-column:1/2;
-        grid-row:3/4 ;
-        border: 2px solid salmon;
-       }
-       #id8
-       {
-        grid-column: 2/3;
-        grid-row: 3/4;
-        border: 2px solid salmon;
-       } 
+        @include Style_Mixin(1/2,1/2,"#",id1);
+        @include  Style_Mixin(2/3,1/2,"#",id2);
+        @include  Style_Mixin(3/4,1/2,"#",id3);
+        @include  Style_Mixin(1/2,2/3,"#",id4);
+        @include  Style_Mixin(2/3,2/3,"#",id5);
+        @include  Style_Mixin(3/4,2/3,"#",id6);
+        @include  Style_Mixin(1/2,3/4,"#",id7);
+        @include  Style_Mixin(2/3,3/4,"#",id8);
        #id9
        {
         grid-column: 3/4;
         grid-row: 3/4;
         border: 2px solid salmon;
        }
+
+    }
+    #Display_Winner
+    {
+        height: inherit;
+        border: 10px solid black;
     }
 }
